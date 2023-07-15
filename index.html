@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index">
+    <meta name="description" content="The home for everything related to in-person Treasure Hacks events">
+    <title>Treasure Hacks Live</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/icons/site.webmanifest">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3c9709">
+    <link rel="shortcut icon" href="/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#1e4a05">
+    <meta name="msapplication-config" content="/icons/browserconfig.xml">
+    <meta name="color-scheme" content="dark">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <!-- Linking flip: @pqina/flip -->
+    <link rel="preload" href="https://unpkg.com/@pqina/flip/dist/flip.min.css" as="style">
+    <link href="https://unpkg.com/@pqina/flip/dist/flip.min.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Hacking Period</h1>
+        <div class="tick" data-did-init="handleTickInit">
+            <div data-repeat="true" data-layout="horizontal fit" data-transform="preset(d, h, m, s) -> delay">
+                <div class="tick-group">
+                    <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                        <span data-view="flip"></span>
+                    </div>
+                    <span data-key="label" data-view="text" class="tick-label"></span>
+                </div>
+            </div>
+        </div>
+        <div class="tick-onended-message" style="display:none">
+            <p>Time's up!</p>
+        </div>
+    </header>
+    <section class="announcements">
+        <div class="latest-announcement">
+            <div class="announcement-icon"><img src="megaphone.svg" alt="Megaphone icon" width="40" height="40"></div>
+            <p>Minim proident duis nisi consequat amet ut nostrud nulla aliquip pariatur consectetur et quis sint.</p>
+        </div>
+        <div class="previous-announcements">
+            <details>
+                <summary>See <!-- (number of) --> previous announcements...</summary>
+                <ul>
+                    <li>
+                        <p>Commodo culpa ut esse fugiat nisi incididunt ea sit enim pariatur.</p>
+                    </li>
+                    <li>
+                        <p>Anim nulla id pariatur laborum eu.</p>
+                    </li>
+                    <li>
+                        <p>Consequat dolor non occaecat dolor magna ullamco fugiat eu voluptate.</p>
+                    </li>
+                    <li>
+                        <p>Dolore sint voluptate nisi deserunt ut et sit culpa Lorem.</p>
+                    </li>
+                    <li>
+                        <p>In sint irure non est consectetur nostrud irure voluptate enim exercitation voluptate.</p>
+                    </li>
+                    <li>
+                        <p>Sunt id enim veniam incididunt sit nisi ex fugiat esse anim.</p>
+                    </li>
+                    <li>
+                        <p>Voluptate quis occaecat nulla culpa ut tempor laboris nisi mollit sint proident.</p>
+                    </li>
+                </ul>
+            </details>
+        </div>
+    </section>
+    <main>
+        <div class="column">
+            <div class="card">
+                <h3 class="card-title">Mentor Help</h3>
+                <div class="card-content">
+                    <p class="content-paragraph">Get help from our expert mentors!</p>
+                    <button class="card-button" onclick="alert('Not implemented')">Request</button> <!-- Not implemented -->
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Prizes</h3>
+                <div class="card-content">
+                    <strong>20</strong> <br>
+                    prize categories <br>
+                    <strong>$1,000,000</strong> <br>
+                    value
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Resources</h3>
+                <div class="card-content">
+                    <a href="https://www.google.com">Resource #1</a><br>
+                    <a href="https://www.google.com">Resource #2</a><br>
+                    <a href="https://www.google.com">Resource #3</a><br>
+                    <a href="https://www.google.com">Resource #4</a><br>
+                    <a href="https://www.google.com">Resource #5</a><br>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">
+                    Map
+                </h3>
+                <div class="card-content">
+                    img go here
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h3 class="card-title"><span class="title-primary">Discord</span> <span class="subtitle"><strong id="discord-online-ct">---</strong> Online</span></h3>
+                <div class="card-content">
+                    <p class="content-paragraph">Join our Discord server, where we host a series of off-season events, unique challenges, and interact with our community!</p>
+                    <a href="https://treasurehacks.dev/discord" target="_blank" class="card-button">Join</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title"><span><strong>?</strong> FAQs</span></h3>
+                <div class="card-content">
+                    <details>
+                        <summary>What is the meaning of life?</summary>
+                        <p>The meaning of life is 42.</p>
+                    </details>
+                    <details>
+                        <summary>When will my merch come?</summary>
+                        <p>Soon ig</p>
+                    </details>
+                    <details>
+                        <summary>What's your favorite color?</summary>
+                        <p>Green</p>
+                    </details>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Engagement</h3>
+                <div class="card-content">
+                    points leaderboard from api
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Schedule</h3>
+                <div class="card-content">
+                    table from api
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

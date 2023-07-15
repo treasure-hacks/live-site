@@ -1,0 +1,30 @@
+{
+    "hacking_period": {"start": "2024-01-01T00:00:00-0700", "end": "2024-01-02T00:00:00-0700"},
+    "announcements": [
+        {"timestamp": "2024-01-01T00:00:00-0700", "text": "announcement1"},
+        {"timestamp": "2024-01-01T00:10:00-0700", "text": "announcement2"}
+    ],
+    "categories": [
+        {"name": "Best Overall", "prizes": "a billion dollars"}
+    ],
+    "resources": [
+        {"name": "Resource #1", "url": "https://www.google.com"},
+        {"name": "Resource #2", "url": "https://www.google.com"},
+        {"name": "Resource #3", "url": "https://www.google.com"},
+        {"name": "Resource #4", "url": "https://www.google.com"},
+        {"name": "Resource #5", "url": "https://www.google.com"}
+    ],
+    "map_url": "https://treasurehacks.org/images/logos/banner-white.png",
+    "faqs": [
+        {"question": "What is the meaning of life?", "answer": "The meaning of life is 42."}
+    ],
+    "leaderboard": [
+        {"name": "Anthony Jenanian", "points": 2134567},
+        {"name": "Ethan Wang", "points": 1234},
+        {"name": "Brandon Joe", "points": 420}
+    ],
+    "schedule": [
+        {"timestamp": "2024-01-01T00:00:00-0700", "title": "Opening ceremony", "url": "https://www.youtube.com/live/ZHrdhePfCfg"},
+        {"timestamp": "2024-01-01T00:00:10-0700", "title": "Hacking period starts"}
+    ]
+}
