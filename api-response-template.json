@@ -1,5 +1,6 @@
 {
-    "hacking_period": {"start": "2024-01-01T00:00:00-0700", "end": "2024-01-02T00:00:00-0700"},
+    "hacking_start_date": "2024-01-01T00:00:00-0700",
+    "hacking_end_date": "2024-01-02T00:00:00-0700",
     "announcements": [
         {"timestamp": "2024-01-01T00:00:00-0700", "text": "announcement1"},
         {"timestamp": "2024-01-01T00:10:00-0700", "text": "announcement2"}

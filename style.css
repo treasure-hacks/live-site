@@ -268,3 +268,40 @@ summary {
     user-select: none;
     -webkit-user-select: none;
 }
+
+#map img {
+    max-width: 100%;
+}
+
+.leaderboard-item {
+    white-space: nowrap;
+    text-align: left;
+}
+
+#leaderboard table {
+    width: 100%;
+}
+
+#leaderboard table td:last-child {
+    width: 100%;
+    padding-left: 8px;
+}
+
+.leaderboard-bar {
+    background-color: var(--accent-color);
+    padding: 4px;
+    margin-block: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    min-width: fit-content;
+    text-align: left;
+    color: var(--accent-secondary);
+}
+
+.leaderboard-name {
+    color: var(--accent-color);
+}
+
+#schedule table {
+    width: 100%;
+}
