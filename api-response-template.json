@@ -4,9 +4,6 @@
         {"timestamp": "2024-01-01T00:00:00-0700", "text": "announcement1"},
         {"timestamp": "2024-01-01T00:10:00-0700", "text": "announcement2"}
     ],
-    "categories": [
-        {"name": "Best Overall", "prizes": "a billion dollars"}
-    ],
     "resources": [
         {"name": "Resource #1", "url": "https://www.google.com"},
         {"name": "Resource #2", "url": "https://www.google.com"},
