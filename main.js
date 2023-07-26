@@ -87,6 +87,7 @@ async function populate() {
     document.getElementById("map").innerText = "";
     const map = document.createElement("img");
     map.src = apiResponse.map_url;
+    map.alt = "Event map";
     document.getElementById("map").appendChild(map);
     document.getElementById("faqs").innerText = "";
     apiResponse.faqs.forEach(x => {

@@ -193,7 +193,7 @@ main {
     border-radius: 7px;
     padding: 5px;
 }
-h3.card-title {
+h2.card-title {
     margin-block: 2px 8px;
     padding-inline: 6px;
     text-align: left;
@@ -205,10 +205,10 @@ h3.card-title {
     display: flex;
     align-items: center;
 }
-h3.card-title .title-primary {
+h2.card-title .title-primary {
     margin-right: auto;
 }
-h3.card-title .subtitle {
+h2.card-title .subtitle {
     font-size: 18px;
     opacity: 0.8;
 }
@@ -227,7 +227,7 @@ h3.card-title .subtitle {
 
 .card-button {
     background-color: var(--button-color);
-    color: var(--card-main);
+    color: var(--accent-secondary);
     font-size: 16px;
     padding: 8px 12px;
     min-width: 100px;
