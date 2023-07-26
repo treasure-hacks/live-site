@@ -1,3 +1,4 @@
+// Configure countdown
 function handleTickInit(tick) {
 
     const constants = {
@@ -37,6 +38,7 @@ function handleTickInit(tick) {
     setTimeout(() => tick.root.classList.add('loaded'), 1000)
 }
 
+// Discord online ct.
 const onlineCtEl = document.getElementById('discord-online-ct')
 async function loadOnlineCount () {
     const response = await fetch('https://discord.com/api/guilds/867913454563000360/widget.json')
@@ -46,3 +48,5 @@ async function loadOnlineCount () {
 }
 setInterval(loadOnlineCount, 30000);
 loadOnlineCount()
+
+// Populate from API
