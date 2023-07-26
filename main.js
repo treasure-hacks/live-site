@@ -59,12 +59,16 @@ loadOnlineCount()
 
 // Populate from API
 populate();
+setInterval(populate, 30000);
+let lastApiResponse;
 async function populate() {
     const apiResponse = await fetch("https://api.treasurehacks.org/events/cause-sd-23/live").then(x => x.json());
-    
+    if(JSON.stringify(apiResponse) == JSON.stringify(lastApiResponse)) return;
+    lastApiResponse = apiResponse;
     document.querySelector(".latest-announcement p").innerText = apiResponse.announcements[0].text;
-    apiResponse.announcements.splice(0, 1);
-    apiResponse.announcements.forEach(x => {
+    const prev = apiResponse.announcements.slice(1);
+    document.querySelector(".previous-announcements details ul").innerHTML = "";
+    prev.forEach(x => {
         const date = new Date(x.timestamp).toLocaleString();
         const text = x.text;
         const el = document.createElement("li");
