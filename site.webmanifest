@@ -1,0 +1,54 @@
+{
+    "name": "Treasure Hacks Live",
+    "short_name": "TH Live",
+    "icons": [
+        {
+          "src": "icons2/manifest-icon-192.maskable.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any"
+        },
+        {
+          "src": "icons2/manifest-icon-192.maskable.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "maskable"
+        },
+        {
+          "src": "icons2/manifest-icon-512.maskable.png",
+          "sizes": "512x512",
+          "type": "image/png",
+          "purpose": "any"
+        },
+        {
+          "src": "icons2/manifest-icon-512.maskable.png",
+          "sizes": "512x512",
+          "type": "image/png",
+          "purpose": "maskable"
+        }
+    ],
+    "id": "/?source=pwa",
+    "start_url": "/?source=pwa",
+    "background_color": "#2E0E36",
+    "display": "fullscreen",
+    "scope": "/",
+    "theme_color": "#2E0E36",
+    "shortcuts": [
+      {
+        "name": "Get Mentor Help",
+        "short_name": "Mentor Help",
+        "description": "Get help from one of our expert mentors",
+        "url": "/?source=pwa",
+        "icons": [
+          {
+            "src": "icons2/help.png",
+            "sizes": "96x96",
+            "type": "image/png",
+            "purpose": "maskable"
+          }
+        ]
+      }
+    ],
+    "description": "The home for everything related to in-person Treasure Hacks events",
+    "gcm_sender_id": "682943180446"
+}

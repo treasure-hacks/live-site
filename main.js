@@ -1,3 +1,22 @@
+// Register service worker + subscribe to push notifications
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js').then(x => {
+        navigator.serviceWorker.getRegistration().then(sw => {
+            sw.pushManager.subscribe({
+                userVisibleOnly: true,
+                applicationServerKey: 'BGW0bJcdVikZmJ1n6zdt7bxrrNQrzP1jyy5zPJIXx3iUKfK-JcD17-eF41uZ0GmnxR6Zzr4jecXGzjD6elv-MlQ'
+            }).then(sub => {
+                console.log(sub);
+            });
+        });
+    });
+}
+
+if(Notification in window) {
+    Notification.requestPermission();
+}
+    
+
 // Configure countdown
 function handleTickInit(...args) { handler(...args); }
 let handler = () => { console.log("afgsf"); };
