@@ -1,6 +1,6 @@
 :root {
     color-scheme: dark;
-    --bg-image: url(chest-bg-blur.jpg);
+    --bg-image: url('/src/chest-bg-blur.jpg');
     --button-color: #B38AEF;
     --header-text-color: #ffffff;
     --accent-secondary: #451551;

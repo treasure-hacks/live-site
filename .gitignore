@@ -1,2 +1,5 @@
 **/.DS_STORE
 todo.md
+.parcel-cache
+docs
+node_modules

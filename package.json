@@ -1,0 +1,51 @@
+{
+  "name": "live-site",
+  "version": "1.0.0",
+  "description": "Website for live in-person events",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build \"src/index.html\" --target static --no-cache --dist-dir ./docs",
+    "dev": "parcel \"src/index.html\" --target static --dist-dir ./docs",
+    "dev:https": "parcel \"src/index.html\" --target static --dist-dir ./docs --https"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@gatsbyjs/parcel-namer-relative-to-cwd": "^2.12.0",
+    "@parcel/namer-default": "^2.9.3",
+    "@parcel/plugin": "^2.9.3",
+    "@parcel/types": "^2.9.3",
+    "@pqina/flip": "^1.7.7",
+    "gatsby-core-utils": "^4.12.0",
+    "parcel": "^2.9.3",
+    "path": "^0.12.7",
+    "web-push": "^3.6.5"
+  },
+  "targets": {
+    "static": {}
+  },
+  "parcel-namer-rewrite": {
+    "rules": {
+      "(.*)": "$1"
+    }
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.9.3",
+    "@parcel/packager-xml": "^2.9.3",
+    "@parcel/transformer-webmanifest": "^2.9.3",
+    "@parcel/transformer-xml": "^2.9.3",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "events": "^3.3.0",
+    "https-browserify": "^1.0.0",
+    "parcel-namer-rewrite": "^2.0.0-rc.3",
+    "parcel-resolver-ignore": "^2.1.5",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
