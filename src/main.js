@@ -4,9 +4,11 @@ if('serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistration().then(sw => {
           sw.pushManager.subscribe({
               userVisibleOnly: true,
-              applicationServerKey: 'BGW0bJcdVikZmJ1n6zdt7bxrrNQrzP1jyy5zPJIXx3iUKfK-JcD17-eF41uZ0GmnxR6Zzr4jecXGzjD6elv-MlQ'
+              // Server's public key
+              applicationServerKey: 'BD_DXIXKbM6eMNm6SejSYnaZbVaM_ekjc_WAXBEPa4pUpf9E7kXEpV-8KtzgSrcl_rk-_yGbonNwyLLe69aJGvE'
           }).then(sub => {
               console.log(sub);
+              window.sub = sub
           });
       });
   });
