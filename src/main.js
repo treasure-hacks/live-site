@@ -23,6 +23,8 @@ let handler = () => { console.log("afgsf"); };
 const tickPromise = new Promise(resolve => {
   handler = resolve
 });
+window.handleTickInit = handleTickInit;
+
 function startClock(tick, time) {
 
   const constants = {
