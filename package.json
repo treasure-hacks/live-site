@@ -4,9 +4,9 @@
   "description": "Website for live in-person events",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build \"src/index.html\" --target static --no-cache --dist-dir ./docs",
-    "dev": "parcel \"src/index.html\" --target static --dist-dir ./docs",
-    "dev:https": "parcel \"src/index.html\" --target static --dist-dir ./docs --https"
+    "build": "parcel build \"src/index.html\" --target static --no-cache",
+    "dev": "parcel \"src/index.html\" --target static",
+    "dev:https": "parcel \"src/index.html\" --target static --https"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
     "@parcel/plugin": "^2.9.3",
     "@parcel/types": "^2.9.3",
     "@pqina/flip": "^1.7.7",
+    "cosmiconfig": "=8.2.0",
     "gatsby-core-utils": "^4.12.0",
     "parcel": "^2.9.3",
     "path": "^0.12.7",
