@@ -7,10 +7,10 @@
 // );
 
 self.addEventListener('push', event => {
-    console.log("push receieved");
-    const title = event.data.text();
-    console.log(title);
-    event.waitUntil(
-        self.registration.showNotification(title)
-    );
+  console.log('push receieved');
+  const title = event.data.text();
+  console.log(title);
+  event.waitUntil(
+    self.registration.showNotification(title)
+  );
 });
