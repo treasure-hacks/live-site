@@ -12,7 +12,7 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-if (Notification in window) {
+if ('Notification' in window) {
   Notification.requestPermission();
 }
 
