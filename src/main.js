@@ -13,7 +13,7 @@ if ('serviceWorker' in navigator) {
 }
 
 if ('Notification' in window) {
-  Notification.requestPermission();
+  document.body.addEventListener('click', () => Notification.requestPermission(), { once: true });
 }
 
 
