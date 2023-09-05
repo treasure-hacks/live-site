@@ -6,7 +6,6 @@ if ('serviceWorker' in navigator) {
       // Server's public key
       applicationServerKey: 'BD_DXIXKbM6eMNm6SejSYnaZbVaM_ekjc_WAXBEPa4pUpf9E7kXEpV-8KtzgSrcl_rk-_yGbonNwyLLe69aJGvE'
     }).then(sub => {
-      console.log(sub);
       window.sub = sub;
     });
   });
@@ -19,7 +18,7 @@ if ('Notification' in window) {
 
 // Configure countdown
 function handleTickInit(...args) { handler(...args); }
-let handler = () => { console.log('afgsf'); };
+let handler = () => {};
 const tickPromise = new Promise(resolve => {
   handler = resolve;
 });
