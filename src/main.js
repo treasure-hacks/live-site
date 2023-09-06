@@ -3,7 +3,7 @@ const SUBSCRIBE_ENDPOINT = 'https://api.treasurehacks.org/notifications/live-sit
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register(new URL('/src/service-worker.js', import.meta.url)).then(sw => {
     if ('Notification' in window) {
-      if (Notification.permission === 'granted') {
+      if (Notification.permission !== 'granted') {
         document.body.addEventListener('click', () => Notification.requestPermission().then(permission => {
           if (permission === 'granted') {
             sw.pushManager.subscribe({
