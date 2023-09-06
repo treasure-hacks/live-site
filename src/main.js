@@ -3,22 +3,24 @@ const SUBSCRIBE_ENDPOINT = 'https://api.treasurehacks.org/notifications/live-sit
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register(new URL('/src/service-worker.js', import.meta.url)).then(sw => {
     if ('Notification' in window) {
-      document.body.addEventListener('click', () => Notification.requestPermission().then(permission => {
-        if (permission === 'granted') {
-          sw.pushManager.subscribe({
-            userVisibleOnly: true,
-            // Server's public key
-            applicationServerKey: 'BD_DXIXKbM6eMNm6SejSYnaZbVaM_ekjc_WAXBEPa4pUpf9E7kXEpV-8KtzgSrcl_rk-_yGbonNwyLLe69aJGvE'
-          }).then(sub => {
-            window.sub = sub;
-            const subscriptionBody = JSON.stringify({
-              subscription: sub.toJSON(),
-              groups: ['announcements']
+      if (Notification.permission === 'granted') {
+        document.body.addEventListener('click', () => Notification.requestPermission().then(permission => {
+          if (permission === 'granted') {
+            sw.pushManager.subscribe({
+              userVisibleOnly: true,
+              // Server's public key
+              applicationServerKey: 'BD_DXIXKbM6eMNm6SejSYnaZbVaM_ekjc_WAXBEPa4pUpf9E7kXEpV-8KtzgSrcl_rk-_yGbonNwyLLe69aJGvE'
+            }).then(sub => {
+              window.sub = sub;
+              const subscriptionBody = JSON.stringify({
+                subscription: sub.toJSON(),
+                groups: ['announcements']
+              });
+              fetch(SUBSCRIBE_ENDPOINT, { headers: { 'Content-Type': 'application/json' }, body: subscriptionBody, method: 'POST' });
             });
-            fetch(SUBSCRIBE_ENDPOINT, { headers: { 'Content-Type': 'application/json' }, body: subscriptionBody, method: 'POST' });
-          });
-        }
-      }), { once: true });
+          }
+        }), { once: true });
+      }
     }
   });
 }
