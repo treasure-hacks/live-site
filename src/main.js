@@ -112,10 +112,17 @@ async function populate() {
     document.getElementById('resources').appendChild(el).appendChild(document.createElement('br'));
   });
   document.getElementById('map').innerText = '';
+  document.querySelector('#map + dialog').innerHTML = '';
   const map = document.createElement('img');
   map.src = apiResponse.map_url;
   map.alt = 'Event map';
+  map.addEventListener('click', e => {
+    document.querySelector('#map + dialog').showModal();
+    document.addEventListener('mouseup', e => document.querySelector('#map + dialog').close(), { once: true });
+  });
+  const mapExpand = map.cloneNode(true);
   document.getElementById('map').appendChild(map);
+  document.querySelector('#map + dialog').appendChild(mapExpand);
   document.getElementById('faqs').innerText = '';
   apiResponse.faqs.forEach(x => {
     const question = x.question;

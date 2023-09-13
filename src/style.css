@@ -311,3 +311,11 @@ summary {
 #schedule table {
     width: 100%;
 }
+
+dialog {
+    max-width: 90%;
+}
+
+dialog img {
+    max-width: 100%;
+}
