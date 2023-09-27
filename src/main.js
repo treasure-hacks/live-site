@@ -118,7 +118,7 @@ async function populate() {
   map.alt = 'Event map';
   map.addEventListener('click', e => {
     document.querySelector('#map + dialog').showModal();
-    document.addEventListener('mouseup', e => document.querySelector('#map + dialog').close(), { once: true });
+    document.addEventListener('pointerup', e => document.querySelector('#map + dialog').close(), { once: true });
   });
   const mapExpand = map.cloneNode(true);
   document.getElementById('map').appendChild(map);
