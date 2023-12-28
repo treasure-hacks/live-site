@@ -109,13 +109,19 @@ h1 {
     max-height: 100%;
 }
 
-.latest-announcement p {
+.latest-announcement div.announcement {
     position: relative;
     margin: 0;
     padding: 0.75em 1.25em;
     min-height: 60px;
     display: flex;
     align-items: center;
+    flex-direction: column;
+}
+
+.latest-announcement div.announcement * {
+    margin: 0;
+    margin-bottom: .75em;
 }
 
 .previous-announcements {
@@ -304,4 +310,12 @@ summary {
 
 #schedule table {
     width: 100%;
+}
+
+dialog {
+    max-width: 90%;
+}
+
+dialog img {
+    max-width: 100%;
 }

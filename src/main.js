@@ -1,3 +1,4 @@
+const marked = require('marked');
 // Register service worker + subscribe to push notifications
 const SUBSCRIBE_ENDPOINT = 'https://api.treasurehacks.org/notifications/live-site/subscribe';
 if ('serviceWorker' in navigator) {
@@ -91,14 +92,14 @@ async function populate() {
   const apiResponse = await fetch('https://api.treasurehacks.org/events/cause-sd-23/live').then(x => x.json());
   if (JSON.stringify(apiResponse) === JSON.stringify(lastApiResponse)) return;
   lastApiResponse = apiResponse;
-  document.querySelector('.latest-announcement p').innerText = apiResponse.announcements[0].text;
+  document.querySelector('.latest-announcement div.announcement').innerHTML = marked.parse(('\n' + apiResponse.announcements[0].text).replace('\n#', '\n###'));
   const prev = apiResponse.announcements.slice(1);
   document.querySelector('.previous-announcements details ul').innerHTML = '';
   prev.forEach(x => {
     const date = new Date(x.timestamp).toLocaleString();
     const text = x.text;
     const el = document.createElement('li');
-    el.innerText = date + ' - ' + text;
+    el.innerHTML = date + ' - ' + marked.parse(('\n' + text).replace('\n#', '\n###'));
     document.querySelector('.previous-announcements details ul').appendChild(el);
   });
   document.getElementById('resources').innerText = '';
@@ -111,10 +112,17 @@ async function populate() {
     document.getElementById('resources').appendChild(el).appendChild(document.createElement('br'));
   });
   document.getElementById('map').innerText = '';
+  document.querySelector('#map + dialog').innerHTML = '';
   const map = document.createElement('img');
   map.src = apiResponse.map_url;
   map.alt = 'Event map';
+  map.addEventListener('click', e => {
+    document.querySelector('#map + dialog').showModal();
+    document.addEventListener('pointerup', e => document.querySelector('#map + dialog').close(), { once: true });
+  });
+  const mapExpand = map.cloneNode(true);
   document.getElementById('map').appendChild(map);
+  document.querySelector('#map + dialog').appendChild(mapExpand);
   document.getElementById('faqs').innerText = '';
   apiResponse.faqs.forEach(x => {
     const question = x.question;
